@@ -1,0 +1,12 @@
+{
+  "home": {
+    "title": "Welcome to the our website!"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "form": "Contact form"
+  },
+  "about": {
+    "title": "About"
+  }
+}
