@@ -1,4 +1,5 @@
 import { FC } from "react";
+
 import { getDictionary } from "@/dictionaries";
 import { IServerPageProps } from "@/types/common";
 

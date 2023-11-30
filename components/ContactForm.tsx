@@ -1,29 +1,25 @@
 "use client";
 
-import { ChangeEvent, useState } from "react";
+import { useContext } from "react";
+
+import { UserContext } from "@/contexts/userContext";
 
 const ContactForm = () => {
-  const [contactInfo, setContactInfo] = useState({ name: "", surname: "" });
-
-  const handleChange =
-    (name: "name" | "surname") => (e: ChangeEvent<HTMLInputElement>) => {
-      const value = e.target.value;
-      setContactInfo((prevState) => ({ ...prevState, [name]: value }));
-    };
+  const { userInfo, changeUserInfo } = useContext(UserContext);
 
   return (
     <div>
       <h3>Form</h3>
       <form>
         <input
-          value={contactInfo.name}
-          onChange={handleChange("name")}
+          value={userInfo.name}
+          onChange={changeUserInfo("name")}
           placeholder="name"
         />
         <br />
         <input
-          value={contactInfo.surname}
-          onChange={handleChange("surname")}
+          value={userInfo.surname}
+          onChange={changeUserInfo("surname")}
           placeholder="surname"
         />
         <br />
